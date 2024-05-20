@@ -1,0 +1,124 @@
+/* Dhruv Patel - 000919050 */
+
+// Group 1 Question 1
+function rangeOfNumber(){
+  let number = document.getElementById("g1q1i").value;
+
+  if(isNaN(number)){
+    document.getElementById("g1q1").innerText = "Not a number.";
+    return;
+  }
+
+  var value = numberValue(number);
+  if(value == 0  || (value >=13 && value<=17)){
+    document.getElementById("g1q1").innerText = "In range.";
+  }
+  else{
+    document.getElementById("g1q1").innerText = "Out of range";
+  }
+}
+
+// Group 1 Question 2
+function convertNumber(){
+  let d = document.getElementById("g1q2i").value;
+  if(isNaN(d) || d<=0){
+    console.log("Not a number or not a positive number.");
+  }
+  else{
+    var y = Math.floor(d/365.25);
+    var restD = d%365.25;
+    var m= Math.floor(restD/30.44);
+    var leftD = restD %30.44;
+    
+    var roundD = Math.round(leftD*100)/100;
+    document.getElementById("q1g2").innerHTML =y + " years " + m + " months and " + roundD + " days";
+  }
+}
+
+
+// Group 2 Question 1
+function Vowel() {
+  var enterVowel = document.getElementById("g3q1i").value;
+  const addLower = enterVowel.toLowerCase();
+
+  switch (addLower) {
+      case "a":
+      case "e":
+      case "i":
+      case "o":
+      case "u":
+          document.getElementById("g2q1").innerHTML = "A Vowel";
+          break;
+      case "y":
+          document.getElementById("g2q1").innerHTML = "Sometimes";
+          break;
+      default:
+          document.getElementById("g2q1") = "Not a vowel";
+  }
+}
+
+//Group 2 Question 2
+function group2Question2(){
+  let input = parseInt(document.getElementById("g2q21").value);
+  if (isNan(input) || input<0){
+    document.getElementById("g2q2i").value = "Bad input";
+  }
+  else{
+    let sumOfInput = 0;
+    let number = input;
+    while(number>0){
+      sumOfInput += number%10;
+      number = Math.floor(number/10);
+    }
+    document.getElementById("g2q2").value = "Sum: ${sum}";
+  }
+}
+
+
+//Group 3 Question 2
+function checkEquation(){
+  let input = document.getElementById("g3q2i").value;
+  let equation = input.replace(/\s/g, "");
+  let type = /^[+]?\d+\s*[+*\/%]\s*\d+$/;
+  if(!type.test(equation)){
+    document.getElementById("g3q2").value = "Invalid formmula";
+    return;
+  }
+
+  const symbols = equation.split(/\s*([+*\/%])\s*/);
+  const firstNum = parseFloat(symbols[0]);
+  const operator = symbols[1];
+  const secondNum = parseFloat(symbols[2]);
+
+
+
+  let output;
+  switch(operator){
+    case "+":
+      output = firstNum + secondNum;
+      break;
+  case "-":
+    output = firstNum - secondNum;
+     break;
+  case "*":
+    output = firstNum*secondNum;
+      break;
+  case "/":
+    if(secondNum === 0){
+      output = "Division by zero";
+    }
+    else{
+      output = firstNum/secondNum;
+    }
+    break;
+    
+  case "%" :
+    output = firstNum % secondNum;
+    break;
+  default: 
+    result = "Invalid operator";
+  }
+
+  document.getElementById("g3q2").value = output;
+}
+

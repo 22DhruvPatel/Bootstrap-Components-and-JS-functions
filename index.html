@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <!--Dhruv Patel, 000919050-->
+  <title>Assignment 2</title>
+  <script src="a2.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="fluid-container">
+      <h2>Assignment 2 - Bootstrap components and js funcions</h2>
+      <p>@author Dhruv Patel, 000919050</p>
+    </div>
+  </header>
+  <div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+          Group 1 - Question 1
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <p>Read the input from the doument, if the input is numeric and if the input is 0, or if it's between 13 and 17 inclusive, output "In range" otherwise output "Out of range". If is not a number output "Note a number.</p>
+
+          
+            <label for="formGroupExampleInput">Enter a number</label>
+            <input type="text" class="form-control" id="g1q1i" placeholder="Enter a number" onchange="rangeOfNumber()">
+        
+          
+            <label for="formGroupExampleInput">Output</label>
+            <textarea  class="form-control" id="g1q1" readonly></textarea>
+          
+
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Group 1 - Question 2
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <p>Read the input from the document and if it is a positive number interpret it as some nuber of days. Convert it into years, months, days. To make things easier, assume there is 365.25 days per year and that every month is 30.44 dyas. Left over days oputput may have a decimal portion, but years and months should be integers. Output these values with appropriate labes. If the input is not a number output "Non-numeric or negative input".</p>
+
+          <div class="form-group">
+            <label for="formGroupExampleInput">Input</label>
+            <input type="text" class="form-control" id="g1q2i" placeholder="Enter a number" onchange="convertNumber()">
+          </div>
+
+          <div class="form-group">
+            <label for="formGroupExampleInput">Output</label>
+            <textarea class="form-control" id="g1q2" readonly></textarea>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingThree">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Group 2 - Question 1
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <p>Read the input from the document and if the input is "a", "e","i","o", or "u" output "A Vowel". If the input is “y” output “Sometimes”. In all other cases output “Not a vowel”. Your function
+            should be case insensitive, i.e., “A” or “a” would both show “A Vowel”.
+          </p>
+
+          <div class="form-group">
+            <label for="formGroupExampleInput">Input</label>
+            <input type="text" class="form-control" id="g2q1i" placeholder="Enter a vowel" onchange="Vowel()">
+          </div>
+          <div class="form-group">
+            <label for="formGroupExampleInput">Output</label>
+            <textarea class="form-control" id="g2q1" readonly></textarea>
+          </div>
+
+
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingFour">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+          Group 2 - Question 2
+        </button>
+      </h2>
+      <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <p>Read the input from the document. If it is an integer, split the absolute value of the integer
+            apart and add up all the digits. If the resulting sum is greater than 9, repeat this process until the
+            result is a single digit. Output the result of the calculation. If the original input was not an
+            integer output “Bad input.”</p>
+
+            <div class="form-group">
+              <label for="formGroupExampleInput">Input</label>
+              <input type="number" class="form-control" id="g2q2i" placeholder="Enter a integer" onchange="group2Question2()">
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput">Output</label>
+              <textarea class="form-control" id="g2q2" readonly></textarea>
+            </div>
+
+        </div>
+      </div>
+
+
+
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingFive">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+            Group 3 - Question 2
+          </button>
+        </h2>
+        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <p>Read the input from the document and treat the input as a short equation with one operator.
+              The operators you should expect are “+”, “-“, “*”, “/”, and “%” with their usual meanings. All
+              valid formulae will have a positive number, an operator, and a positive number, i.e., “3 * 2” or
+              “5 + 2”. Ignore spaces. If the formula is valid, output the result of the formula, otherwise output
+              “invalid formula”. Use the following inputs as test values “*2”, “3*”, “3+*2”, “3*2”, “15*10”
+              which should result in outputs “invalid formula”, “invalid formula”, “invalid formula”, “6”, and
+              “150”.</p>
+
+              <div class="form-group">
+                <label  for="formGroupExampleInput">Input</label>
+                <input type="number" class="form-control" id="g3q2i" placeholder="Give a equation" onchange="checkEquation()">
+              </div>
+              <div class="form-group">
+                <label for="formGroupExampleInput">Output</label>
+                <textarea class="form-control" id="g3q2" readonly></textarea>
+              </div>
+
+              
+
+          </div>
+        </div>
+  </div>
+</body>
+</html>
